@@ -83,21 +83,21 @@ public class JsoupComplexHtmlTableExtractionTest {
                 .collect(Collectors.toList());
 
         //then:
-//        assertThat(result).hasSize(7);
-//        //and:
-//        assertThat(result.get(0)).hasSameElementsAs(Arrays.asList("H1", "H2", "H2"));
-//        //and:
-//        assertThat(result.get(1)).hasSameElementsAs(Arrays.asList("", "SubH2_1", "SubH2_2"));
-//        //and:
-//        assertThat(result.get(2)).hasSameElementsAs(Arrays.asList("A1", "B1", "C1"));
-//        //and:
-//        assertThat(result.get(3)).hasSameElementsAs(Arrays.asList("A1", "B2", "C3"));
-//        //and:
-//        assertThat(result.get(4)).hasSameElementsAs(Arrays.asList("C4", "C5", "C6"));
-//        //and:
-//        assertThat(result.get(5)).hasSameElementsAs(Arrays.asList("D7", "D9", "D9"));
-//        //and:
-//        assertThat(result.get(6)).hasSameElementsAs(Arrays.asList("Notes", "Notes", "Notes"));
+        assertThat(result).hasSize(7);
+        //and:
+        assertThat(result.get(0)).hasSameElementsAs(Arrays.asList("H1", "H2", "H2"));
+        //and:
+        assertThat(result.get(1)).hasSameElementsAs(Arrays.asList("", "SubH2_1", "SubH2_2"));
+        //and:
+        assertThat(result.get(2)).hasSameElementsAs(Arrays.asList("A1", "B1", "C1"));
+        //and:
+        assertThat(result.get(3)).hasSameElementsAs(Arrays.asList("A1", "B2", "C3"));
+        //and:
+        assertThat(result.get(4)).hasSameElementsAs(Arrays.asList("C4", "C5", "C6"));
+        //and:
+        assertThat(result.get(5)).hasSameElementsAs(Arrays.asList("D7", "D9", "D9"));
+        //and:
+        assertThat(result.get(6)).hasSameElementsAs(Arrays.asList("Notes", "Notes", "Notes"));
 
         result.forEach(System.out::println);
     }
