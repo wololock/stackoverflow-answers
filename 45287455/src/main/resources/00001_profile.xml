@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="1" author="joedoe">
+        <!-- Quartz Scheduler DB Schema -->
+        <sql dbms="postgresql" stripComments="true">
+            <![CDATA[
+
+-- Create Tables
+DROP TABLE IF EXISTS profile;
+
+CREATE TABLE profile (
+    profile_id serial PRIMARY KEY,
+    name       varchar(255) NOT NULL
+);
+
+INSERT INTO profile (profile_id, name) VALUES
+(1, 'Lorem Ipsum'),
+(2, 'Foo Bar');
+
+]]>
+        </sql>
+        <!-- ./Quartz Scheduler DB Schema -->
+    </changeSet>
+
+</databaseChangeLog>
