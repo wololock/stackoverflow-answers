@@ -1,0 +1,42 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+}
+
+sourceSets {
+    main{
+        java{
+            srcDirs 'src/main/java'
+        }
+    }
+}
+
+processResources {
+    from 'src/main/resources'
+}
+
+task compile (type: JavaCompile) {
+    source = sourceSets.main.java.srcDirs
+    include '**/*.java'
+    classpath = sourceSets.main.compileClasspath
+    destinationDir = sourceSets.main.output.classesDir
+}
+
+compile.options.compilerArgs = ["-sourcepath", "$projectDir/src/main/java"]
+
+dependencies {
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.6'
+}
+
+task fatJar(type:Jar) {
+    baseName = 'xxxxxxx'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+
+defaultTasks 'clean', 'compile', 'fatJar'
