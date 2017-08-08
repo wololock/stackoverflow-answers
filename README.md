@@ -16,4 +16,5 @@ of software developers all kind - juniors, seniors and masters.
 ## Useful links
 
 * [**How do I ask a good question?**](https://stackoverflow.com/help/how-to-ask)
-* [**How to create a Minimal, Complete, and Verifiable example**](https://stackoverflow.com/help/mcve)                    
+* [**How to create a Minimal, Complete, and Verifiable example**](https://stackoverflow.com/help/mcve) 
+* [**What topics can be asked on StackOverflow?**](https://stackoverflow.com/help/on-topic)                   
